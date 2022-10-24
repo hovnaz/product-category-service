@@ -1,5 +1,6 @@
 package com.example.productcategoryservice.endpoint;
 
+import com.example.productcategoryservice.entity.Product;
 import com.example.productcategoryservice.service.ProductService;
 import com.example.productcategoryservice.transfer.request.CategoryRequest;
 import com.example.productcategoryservice.transfer.request.ProductRequest;
@@ -10,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -22,9 +24,8 @@ public class ProductEndpoint {
         return productService.findAll();
     }
     @PostMapping("/")
-    public ResponseEntity<?> createProduct(@RequestBody ProductRequest productRequest) {
+    public void createProduct(@RequestBody ProductRequest productRequest) {
         productService.save(productRequest);
-        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/{id}")
@@ -39,5 +40,9 @@ public class ProductEndpoint {
     @PutMapping("/{id}")
     public void updateProductById(@PathVariable int id, @RequestBody ProductRequest productRequest){
         productService.update(id, productRequest);
+    }
+    @GetMapping("/byCategory/{id}")
+    public List<Product> findAllByCategoryId(@PathVariable int id){
+        return productService.findAllByCategoryId(id);
     }
 }

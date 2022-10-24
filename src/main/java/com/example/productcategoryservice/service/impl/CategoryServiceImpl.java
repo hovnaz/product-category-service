@@ -1,17 +1,14 @@
 package com.example.productcategoryservice.service.impl;
 
 import com.example.productcategoryservice.entity.Category;
-import com.example.productcategoryservice.entity.Product;
 import com.example.productcategoryservice.exception.NotFoundException;
 import com.example.productcategoryservice.mapper.CategoryMapper;
 import com.example.productcategoryservice.repository.CategoryRepository;
 import com.example.productcategoryservice.service.CategoryService;
 import com.example.productcategoryservice.transfer.request.CategoryRequest;
-import com.example.productcategoryservice.transfer.request.ProductRequest;
 import com.example.productcategoryservice.transfer.response.CategoryResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;

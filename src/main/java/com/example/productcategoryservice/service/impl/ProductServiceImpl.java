@@ -5,12 +5,10 @@ import com.example.productcategoryservice.entity.Product;
 import com.example.productcategoryservice.exception.NotFoundException;
 import com.example.productcategoryservice.mapper.CategoryMapper;
 import com.example.productcategoryservice.mapper.ProductMapper;
-import com.example.productcategoryservice.repository.CategoryRepository;
 import com.example.productcategoryservice.repository.ProductRepository;
 import com.example.productcategoryservice.service.CategoryService;
 import com.example.productcategoryservice.service.ProductService;
 import com.example.productcategoryservice.transfer.request.ProductRequest;
-import com.example.productcategoryservice.transfer.response.CategoryResponse;
 import com.example.productcategoryservice.transfer.response.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -62,6 +60,11 @@ public class ProductServiceImpl implements ProductService {
         product.setTitle(productRequest.getTitle());
         product.setPrice(productRequest.getPrice());
         productRepository.save(product);
+    }
+
+    @Override
+    public List<Product> findAllByCategoryId(long id) {
+        return productRepository.findAllByCategory_Id(id);
     }
 
     private Product findByIdOrElseThrow(long id) {

@@ -16,13 +16,15 @@ public class CategoryEndpoint {
     private final CategoryService categoryService;
 
     @GetMapping(name = "/")
-    public List<CategoryResponse> getAllCategories(){
-        return categoryService.findAll();
+    public ResponseEntity<?> getAllCategories(){
+        List<CategoryResponse> all = categoryService.findAll();
+        return ResponseEntity.ok(all);
     }
 
     @GetMapping("/{id}")
-    public CategoryResponse getCategory(@PathVariable int id){
-        return categoryService.findById(id);
+    public ResponseEntity<CategoryResponse> getCategory(@PathVariable int id){
+        CategoryResponse byId = categoryService.findById(id);
+        return ResponseEntity.ok(byId);
     }
 
     @DeleteMapping("/{id}")

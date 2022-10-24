@@ -1,9 +1,11 @@
 package com.example.productcategoryservice.service;
 
+import com.example.productcategoryservice.entity.Product;
 import com.example.productcategoryservice.transfer.request.ProductRequest;
 import com.example.productcategoryservice.transfer.response.ProductResponse;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProductService {
     ProductResponse findById(long id);
@@ -15,4 +17,6 @@ public interface ProductService {
     void save(ProductRequest productRequest);
 
     void update(int id, ProductRequest productRequest);
+
+    List<Product> findAllByCategoryId(long id);
 }
