@@ -1,4 +1,4 @@
-package com.mulberry.blackmulberry.mapper.base;
+package com.example.productcategoryservice.mapper.base;
 
 public interface BaseMapper<Entity, Request, Response> {
 

@@ -1,8 +1,8 @@
-package com.mulberry.blackmulberry.exception;
+package com.example.productcategoryservice.exception;
 
-public class UserNotFoundException extends RuntimeException {
+public class NotFoundException extends RuntimeException {
 
-    public UserNotFoundException(String message){
+    public NotFoundException(String message){
         super(message);
     }
 }

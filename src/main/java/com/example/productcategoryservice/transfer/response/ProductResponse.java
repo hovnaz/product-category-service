@@ -1,5 +1,6 @@
-package com.example.productcategoryservice.transfer.request;
+package com.example.productcategoryservice.transfer.response;
 
+import com.example.productcategoryservice.entity.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,8 +10,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ProductRequest {
+public class ProductResponse {
+    private long id;
     private String title;
     private int count;
     private double price;
+    private CategoryResponse category;
 }

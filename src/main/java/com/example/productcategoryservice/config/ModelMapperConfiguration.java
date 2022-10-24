@@ -1,4 +1,4 @@
-package com.mulberry.blackmulberry.config;
+package com.example.productcategoryservice.config;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
