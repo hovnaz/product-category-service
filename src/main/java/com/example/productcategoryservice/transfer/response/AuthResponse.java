@@ -9,10 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ProductResponse {
-    private long id;
-    private String title;
-    private int count;
-    private double price;
-    private CategoryResponse category;
+public class AuthResponse {
+    private String token;
 }

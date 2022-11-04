@@ -12,6 +12,7 @@ import com.example.productcategoryservice.transfer.request.ProductRequest;
 import com.example.productcategoryservice.transfer.response.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;

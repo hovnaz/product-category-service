@@ -5,7 +5,6 @@ import com.example.productcategoryservice.transfer.request.ProductRequest;
 import com.example.productcategoryservice.transfer.response.ProductResponse;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProductService {
     ProductResponse findById(long id);

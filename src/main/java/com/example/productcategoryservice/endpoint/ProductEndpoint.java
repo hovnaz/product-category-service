@@ -2,16 +2,12 @@ package com.example.productcategoryservice.endpoint;
 
 import com.example.productcategoryservice.entity.Product;
 import com.example.productcategoryservice.service.ProductService;
-import com.example.productcategoryservice.transfer.request.CategoryRequest;
 import com.example.productcategoryservice.transfer.request.ProductRequest;
-import com.example.productcategoryservice.transfer.response.CategoryResponse;
 import com.example.productcategoryservice.transfer.response.ProductResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
