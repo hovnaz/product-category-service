@@ -1,4 +1,4 @@
-package com.example.productcategoryservice.transfer.request;
+package com.example.productcategoryservice.transfer.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class AuthResponse {
-    private String token;
+public class UserRegistrationResponse {
+    private long id;
+    private String email;
 }
